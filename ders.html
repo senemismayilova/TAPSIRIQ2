@@ -1,0 +1,792 @@
+<!--  
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadə Kalkulyator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+</body> -->
+
+<!--   
+SUAL 1: -->
+
+<!-- 
+<p>1 kalkulyator</p>
+ <div class="calculator">
+        <input type="text" id="num1" >
+        <input type="text" id="num2" >
+        <button onclick="calculate('add')">+</button>
+        <button onclick="calculate('subtract')">-</button>
+        <button onclick="calculate('multiply')">*</button>
+        <button onclick="calculate('divide')">/</button>
+        <div class="result" id="result"> </div>
+    </div>  
+
+
+    <script>
+        function calculate(operation) {
+    const num1 = parseFloat(document.getElementById('num1').value);
+    const num2 = parseFloat(document.getElementById('num2').value);
+    let result;
+
+    if (isNaN(num1) || isNaN(num2)) {
+        alert('Duzgun yazin');
+        return;
+    }
+
+    switch (operation) {
+        case 'add':
+            result = num1 + num2;
+            break;
+        case 'subtract':
+            result = num1 - num2;
+            break;
+        case 'multiply':
+            result = num1 * num2;
+            break;
+        case 'divide':
+            if (num2 === 0) {
+                alert('bir reqem 0 a bolunmez');
+                return;
+            }
+            result = num1 / num2;
+            break;
+    }
+
+    document.getElementById('result').innerText =  + result;
+}
+
+
+    </script>
+
+    
+    <style>
+        .calculator {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+    </style>  -->
+
+
+
+
+    <!-- SUAL 2: -->
+     
+         <!-- <p> 2.   İnputa daxil edilmiş sözü tersine çeviren proqram</p>
+        <br><br> <input type="text" id="inputString" placeholder="">
+         <button onclick="reverseString()">convert</button>
+         <p> <span id="result"></span></p>
+     
+
+         <script>
+            function reverseString() {
+                const input = document.getElementById("inputString").value;
+                const reversed = input.split('').reverse().join('');
+                document.getElementById("result").innerText = reversed;
+            }
+        </script> -->
+
+
+
+        <!-- SUAL 3: -->
+
+        <!-- <div class="container">
+           <p>3.  Divin dizayinini deyisin</p>
+            <br><br><div class="controls">
+                <input type="text" id="width" placeholder="width">
+                <input type="text" id="height" placeholder="height">
+                <input type="text" id="borderWidth" placeholder="border width">
+             <br><br>   <select id="borderStyle">
+                    <option value="solid">Border style</option>
+                    <option value="solid">Solid</option>
+                    <option value="dotted">Dotted</option>
+                    <option value="dashed">Dashed</option>
+                </select>
+                <select id="borderColor">
+                    <option value="black">Border color</option>
+                    <option value="black">Black</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                </select>
+                <select id="textColor">
+                    <option value="black">Color</option>
+                    <option value="black">Black</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                </select>
+                <select id="backgroundColor">
+                    <option value="white">Background color</option>
+                    <option value="white">White</option>
+                    <option value="lightgrey">Light Grey</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="cyan">Cyan</option>
+                </select>
+                <button onclick="changeDivStyle()">Ok</button>
+            </div>
+            <div id="myDiv"></div>
+        </div>
+
+        <style>
+
+        .controls {
+            margin-bottom: 20px;
+        }
+        .controls input,
+        .controls select,
+        .controls button {
+            margin: 5px 10px;
+            padding: 5px;
+        }
+        #myDiv {
+            width: 100px;
+            height: 100px;
+            border: 1px dashed black;
+        }
+    </style>
+
+    <script>
+        function changeDivStyle() {
+            var width = document.getElementById('width').value;
+            var height = document.getElementById('height').value;
+            var borderWidth = document.getElementById('borderWidth').value;
+            var borderStyle = document.getElementById('borderStyle').value;
+            var borderColor = document.getElementById('borderColor').value;
+            var textColor = document.getElementById('textColor').value;
+            var backgroundColor = document.getElementById('backgroundColor').value;
+        
+            var div = document.getElementById('myDiv');
+            if (width) div.style.width = width + 'px';
+            if (height) div.style.height = height + 'px';
+            if (borderWidth) div.style.borderWidth = borderWidth + 'px';
+            if (borderStyle) div.style.borderStyle = borderStyle;
+            if (borderColor) div.style.borderColor = borderColor;
+            if (textColor) div.style.color = textColor;
+            if (backgroundColor) div.style.backgroundColor = backgroundColor;
+        }
+
+    </script>
+ -->
+
+  
+    <!-- SUAL 4: -->
+
+    <!-- <br><p> 4. Div-in width-i 200 px-dir. Width üçün təyin olunan inputa daxil <br>olunan qiymət qədər div-in width-ni artırıMəs: inputa 50 daxil olunarsa divin width-i 250px olmalıdır</p>
+        <input type="text" id="widthInput" placeholder="width">
+        <input type="text" id="height" placeholder="height">
+        <input type="text" id="border width" placeholder="border width">
+       
+        <br><br><br><div id="myDiv"></div>
+
+        <style>
+            #myDiv {
+    width: 200px;
+    height: 200px;
+    border: 1px dashed black;
+} 
+        </style>
+
+        <script>
+            function changeWidth() {
+                
+                const input = document.getElementById('widthInput').value;
+                const div = document.getElementById('myDiv');
+                const newWidth = 200 + parseInt(input, 10);
+                div.style.width = newWidth + 'px';
+            }
+        </script>
+ -->
+
+
+     
+        <!-- SUAL 5: -->
+
+        <!-- <p>5. Kalkulyator</p>
+        <br><br><div class="calculator">
+           <div class="display" id="display">0</div>
+           <div class="buttons">
+               <button class="button operator">+</button>
+               <button class="button operator">-</button>
+               <button class="button operator">×</button>
+               <button class="button operator">÷</button>
+               <button class="button number">7</button>
+               <button class="button number">8</button>
+               <button class="button number">9</button>
+               <button class="button number">4</button>
+               <button class="button number">5</button>
+               <button class="button number">6</button>
+               <button class="button number">1</button>
+               <button class="button number">2</button>
+               <button class="button number">3</button>
+               <button class="button number">0</button>
+               <button class="button" id="clear">AC</button>
+               <button class="button equal" id="equal">=</button>
+           </div>
+       </div>
+
+<style>
+    .calculator {
+    width: 320px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.display {
+    background-color: #333;
+    color: white;
+    font-size: 2em;
+    text-align: right;
+    padding: 20px;
+    box-sizing: border-box;
+} 
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+}
+
+.button {
+    padding: 20px;
+    background-color: #da9a9a;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:active {
+    background-color: #dab8b8;
+}
+
+.operator {
+    background-color: #e6cdcd;
+}
+
+.equal {
+    background-color: #4CAF50;
+    color: white;
+    grid-column: span 5;
+}
+
+#clear {
+    background-color: #e91e63;
+    color: rgb(149, 120, 120);
+}
+</style>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const display = document.getElementById('display');
+    const buttons = Array.from(document.getElementsByClassName('button'));
+    let currentInput = '0';
+    let operator = null;
+    let previousInput = null;
+
+    buttons.map(button => {
+        button.addEventListener('click', (e) => {
+            const value = e.target.innerText;
+
+            if (value === 'AC') {
+                currentInput = '0';
+                operator = null;
+                previousInput = null;
+                display.innerText = currentInput;
+                return;
+            }
+
+            if (value === '=') {
+                if (operator && previousInput !== null) {
+                    currentInput = evaluate(previousInput, currentInput, operator);
+                    operator = null;
+                    previousInput = null;
+                    display.innerText = currentInput;
+                }
+                return;
+            }
+
+            if (isOperator(value)) {
+                if (operator && previousInput !== null) {
+                    currentInput = evaluate(previousInput, currentInput, operator);
+                    display.innerText = currentInput;
+                }
+                operator = value;
+                previousInput = currentInput;
+                currentInput = '0';
+                return;
+            }
+
+            if (currentInput === '0') {
+                currentInput = value;
+            } else {
+                currentInput += value;
+            }
+
+            display.innerText = currentInput;
+        });
+    });
+
+    function isOperator(value) {
+        return value === '+' || value === '-' || value === '×' || value === '÷';
+    }
+
+    function evaluate(a, b, operator) {
+        a = parseFloat(a);
+        b = parseFloat(b);
+        switch (operator) {
+            case '+':
+                return (a + b).toString();
+            case '-':
+                return (a - b).toString();
+            case '×':
+                return (a * b).toString();
+            case '÷':
+                return (a / b).toString();
+            default:
+                return '0';
+        }
+    }
+});
+
+const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+function toplama(a, b) {
+    return a + b;
+}
+
+function cixma(a, b) {
+    return a - b;
+}
+
+function vurma(a, b) {
+    return a * b;
+}
+
+function bolme(a, b) {
+    if (b === 0) {
+        return "Bölen 0 olmaz!";
+    } else {
+        return a / b;
+    }
+}
+</script>
+
+
+
+ -->
+
+
+  <!-- SUAL 6: -->
+
+  <!-- <section class="box6">
+    <div class="text">
+      <h3>ABOUT</h3>
+      <p>Lorem ipsum dolor sit amet consectetur.</p>
+    </div>
+    <div class="portfolio">
+      <div>
+        <div class="image" onclick="imags(this)">
+          <img
+            src="https://startbootstrap.github.io/startbootstrap-agency/assets/img/portfolio/1.jpg"
+            alt=""
+          />
+        </div>
+
+        <h3>Threads</h3>
+        <p>Illustration</p>
+      </div>
+      <div>
+        <div class="image" onclick="imags(this)">
+          <img
+            src="https://startbootstrap.github.io/startbootstrap-agency/assets/img/portfolio/2.jpg"
+            alt=""
+          />
+        </div>
+
+        <h3>Threads</h3>
+        <p>Illustration</p>
+      </div>
+      <div>
+        <div class="image" onclick="imags(this)">
+          <img
+            src="https://startbootstrap.github.io/startbootstrap-agency/assets/img/portfolio/3.jpg"
+            alt=""
+          />
+        </div>
+
+        <h3>Threads</h3>
+        <p>Illustration</p>
+      </div>
+      <div>
+        <div class="image" onclick="imags(this)">
+          <img
+            src="https://startbootstrap.github.io/startbootstrap-agency/assets/img/portfolio/4.jpg"
+            alt=""
+          />
+        </div>
+
+        <h3>Threads</h3>
+        <p>Illustration</p>
+      </div>
+      <div>
+        <div class="image" onclick="imags(this)">
+          <img
+            src="https://startbootstrap.github.io/startbootstrap-agency/assets/img/portfolio/5.jpg"
+            alt=""
+          />
+        </div>
+
+        <h3>Threads</h3>
+        <p>Illustration</p>
+      </div>
+      <div>
+        <div class="image" onclick="imags(this)">
+          <img
+            src="https://startbootstrap.github.io/startbootstrap-agency/assets/img/portfolio/6.jpg"
+            alt=""
+          />
+        </div>
+
+        <h3>Threads</h3>
+        <p>Illustration</p>
+      </div>
+    </div>
+  </section>
+
+<script>
+function imags(x){
+let element =x.parentElement;
+img_source = element.children[0].children[0].src;
+let h3 = element.children[1].innerText
+let p = element.children[2].innerText
+console.log(h3);
+console.log(p);
+img_div = document.querySelector('.img_show');
+img_div.style.display='flex'
+
+img_div.children[3].src= img_source;
+img_div.children[5].innerText+= ' '+h3;
+img_div.children[6].innerText += ' '+h3;
+
+}
+
+
+function hide_btn(x){
+console.log(x.parentElement.parentElement);
+x.parentElement.parentElement.style.display = 'none';
+}
+</script>
+
+<style>
+.box6{
+padding: 100px;
+}
+
+.text h3{
+text-align: center;
+font-size: 2.25rem;
+}
+
+.text p{
+text-align: center;
+margin: 20px 0;
+}
+
+.portfolio img{
+object-fit: cover;
+margin: auto;
+width: 100%;
+
+
+}
+
+.portfolio{
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+margin: auto;
+gap: 50px;
+
+}
+
+.portfolio>div{
+width: 360px;
+text-align: center;
+padding-bottom: 20px;
+background-color: white;
+
+}
+
+.box2, .box4{
+background-color: rgb(248 249 250);
+}
+
+.portfolio h3{
+font-size: 1.5rem;
+margin-top: 20px;
+}
+
+.portfolio p{
+color: #6c757d;
+font-style: italic;
+font-size: 1.1rem;
+margin-bottom:  20px;
+}
+
+.image{
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+.image::after{
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+transition: 0.5s;
+
+}
+
+.image:hover::after{
+font-family: FontAwesome;
+content: '\2b';
+display: flex;
+align-items: center;
+justify-content: center;
+background-color:#ffc800;
+opacity: 0.9;
+text-align: center;
+font-size: 50px;
+color: white;
+}
+
+.img_show{
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+text-align: center;
+display: none; 
+position: fixed; 
+z-index: 1; 
+left: 0;
+background-color: white;
+top: 0;
+overflow: auto; 
+}
+
+.img_show img{
+object-fit: cover;
+margin: auto;
+width: 50%;
+height: auto;
+
+}
+
+.img_show div{
+display: flex;
+justify-content: right;
+padding: 10px;
+
+}
+</style>
+
+
+
+ -->
+
+
+    <!-- SUAL 11: -->
+    <!-- <p>11. Akordion menu</p>
+    <h2>HAQQIMIZDA</h2>
+    
+    <button class="accordion"> ▶ Fəaliyyətimiz</button>
+    <div class="panel">
+      <p>Azərbaycan Respublikası beynəlxalq ictimaiyyətin etibarlı və məsuliyyətli üzvü kimi iqlim dəyişmələrinin fəsadlarına qarşı mübarizəyə öz töhfəsini verir.
+
+        Azərbaycanın 2030-cu ilə qədər sosial-iqtisadi inkişafa dair beş milli prioritetindən biri “Təmiz ətraf mühit və yaşıl artım ölkəsi” kimi müəyyən edilmişdir. Həmin prioritetə uyğun olaraq, ətraf mühitin sağlamlaşdırılması, yaşıllıqların bərpası və artırılması, su ehtiyatlarından və dayanıqlı enerji mənbələrindən səmərəli istifadənin təmin edilməsi istiqamətində işlər aparılır.
+        
+        Azərbaycan baza ili (1990) ilə müqayisədə 2030-cu ilə qədər istilik effekti yaradan qazların emissiyalarının 35 faiz, 2050-ci ilə qədər isə 40 faiz azaldılmasını hədəf kimi götürmüşdür.
+        
+        İşğaldan azad edilmiş Qarabağ və Şərqi Zəngəzur, eləcə də Naxçıvan Muxtar Respublikası yaşıl enerji zonası elan olunmuşdur. Azad edilmiş ərazilərdə həyata keçirilən genişmiqyaslı bərpa və yenidənqurma prosesində ətraf mühitin qorunması prioritetdir. Həmin ərazilərdə “ağıllı şəhər”, “ağıllı kənd” kimi innovativ yanaşmalar tətbiq edilir, ekosistem bərpa olunur.
+        
+        Yaşıl enerji növlərinin yaradılması və yaşıl enerjinin dünya bazarlarına nəqli Azərbaycanın enerji siyasətinin prioritetidir. Azərbaycan elektrik enerjisi istehsalının qoyuluş gücündə bərpa olunan enerji mənbələrinin payının 2030-cu ilə qədər 30 faizə çatdırılmasını hədəfləyir.
+        
+        BMT-nin İqlim Dəyişmələri üzrə Çərçivə Konvensiyasının Tərəflər Konfransının 29-cu sessiyası – COP29 kimi mötəbər bir tədbirin Azərbaycanda keçirilməsi ilə əlaqədar yekdil qərarın verilməsi beynəlxalq ictimaiyyət tərəfindən Azərbaycana böyük hörmət və etimadın, eləcə də ölkəmizin milli, regional və qlobal səviyyədə ətraf mühitin qorunması, iqlim dəyişmələrinin qarşısının alınması işinə töhfəsinin təqdir olunmasının bariz nümunəsidir.
+        
+        Azərbaycan Respublikası Konstitusiyasının 109-cu maddəsinin 32-ci bəndini rəhbər tutaraq, iqlim dəyişmələrinə qarşı qlobal mübarizədə beynəlxalq həmrəyliyin gücləndirilməsi məqsədilə qərara alıram:
+        
+        1. Azərbaycan Respublikasında 2024-cü il “Yaşıl dünya naminə həmrəylik ili” elan edilsin.
+        
+        2. Azərbaycan Respublikası Prezidentinin Administrasiyası Azərbaycan Respublikasında 2024-cü ilin “Yaşıl dünya naminə həmrəylik ili” elan edilməsi ilə bağlı tədbirlər planına dair təkliflərini bir ay müddətində hazırlayıb Azərbaycan Respublikasının Prezidentinə təqdim etsin.
+        
+         
+        
+        İlham Əliyev
+        
+        Azərbaycan Respublikasının Prezidenti
+        
+        Bakı şəhəri, 25 dekabr 2023-cü i.</p>
+    </div>
+    
+    <button class="accordion"> ▶ Əsas Məqsədimiz</button>
+    <div class="panel">
+      <p>Azərbaycan Respublikası beynəlxalq ictimaiyyətin etibarlı və məsuliyyətli üzvü kimi iqlim dəyişmələrinin fəsadlarına qarşı mübarizəyə öz töhfəsini verir.
+
+        Azərbaycanın 2030-cu ilə qədər sosial-iqtisadi inkişafa dair beş milli prioritetindən biri “Təmiz ətraf mühit və yaşıl artım ölkəsi” kimi müəyyən edilmişdir. Həmin prioritetə uyğun olaraq, ətraf mühitin sağlamlaşdırılması, yaşıllıqların bərpası və artırılması, su ehtiyatlarından və dayanıqlı enerji mənbələrindən səmərəli istifadənin təmin edilməsi istiqamətində işlər aparılır.
+        
+        Azərbaycan baza ili (1990) ilə müqayisədə 2030-cu ilə qədər istilik effekti yaradan qazların emissiyalarının 35 faiz, 2050-ci ilə qədər isə 40 faiz azaldılmasını hədəf kimi götürmüşdür.
+        
+        İşğaldan azad edilmiş Qarabağ və Şərqi Zəngəzur, eləcə də Naxçıvan Muxtar Respublikası yaşıl enerji zonası elan olunmuşdur. Azad edilmiş ərazilərdə həyata keçirilən genişmiqyaslı bərpa və yenidənqurma prosesində ətraf mühitin qorunması prioritetdir. Həmin ərazilərdə “ağıllı şəhər”, “ağıllı kənd” kimi innovativ yanaşmalar tətbiq edilir, ekosistem bərpa olunur.
+        
+        Yaşıl enerji növlərinin yaradılması və yaşıl enerjinin dünya bazarlarına nəqli Azərbaycanın enerji siyasətinin prioritetidir. Azərbaycan elektrik enerjisi istehsalının qoyuluş gücündə bərpa olunan enerji mənbələrinin payının 2030-cu ilə qədər 30 faizə çatdırılmasını hədəfləyir.
+        
+        BMT-nin İqlim Dəyişmələri üzrə Çərçivə Konvensiyasının Tərəflər Konfransının 29-cu sessiyası – COP29 kimi mötəbər bir tədbirin Azərbaycanda keçirilməsi ilə əlaqədar yekdil qərarın verilməsi beynəlxalq ictimaiyyət tərəfindən Azərbaycana böyük hörmət və etimadın, eləcə də ölkəmizin milli, regional və qlobal səviyyədə ətraf mühitin qorunması, iqlim dəyişmələrinin qarşısının alınması işinə töhfəsinin təqdir olunmasının bariz nümunəsidir.
+        
+        Azərbaycan Respublikası Konstitusiyasının 109-cu maddəsinin 32-ci bəndini rəhbər tutaraq, iqlim dəyişmələrinə qarşı qlobal mübarizədə beynəlxalq həmrəyliyin gücləndirilməsi məqsədilə qərara alıram:
+        
+        1. Azərbaycan Respublikasında 2024-cü il “Yaşıl dünya naminə həmrəylik ili” elan edilsin.
+        
+        2. Azərbaycan Respublikası Prezidentinin Administrasiyası Azərbaycan Respublikasında 2024-cü ilin “Yaşıl dünya naminə həmrəylik ili” elan edilməsi ilə bağlı tədbirlər planına dair təkliflərini bir ay müddətində hazırlayıb Azərbaycan Respublikasının Prezidentinə təqdim etsin.
+        
+         
+        
+        İlham Əliyev
+        
+        Azərbaycan Respublikasının Prezidenti
+        
+        Bakı şəhəri, 25 dekabr 2023-cü i.</p>
+    </div>
+    
+    <button class="accordion"> ▶ Əsas hədəflərimiz</button>
+    <div class="panel">
+      <p>Azərbaycan Respublikası beynəlxalq ictimaiyyətin etibarlı və məsuliyyətli üzvü kimi iqlim dəyişmələrinin fəsadlarına qarşı mübarizəyə öz töhfəsini verir.
+
+        Azərbaycanın 2030-cu ilə qədər sosial-iqtisadi inkişafa dair beş milli prioritetindən biri “Təmiz ətraf mühit və yaşıl artım ölkəsi” kimi müəyyən edilmişdir. Həmin prioritetə uyğun olaraq, ətraf mühitin sağlamlaşdırılması, yaşıllıqların bərpası və artırılması, su ehtiyatlarından və dayanıqlı enerji mənbələrindən səmərəli istifadənin təmin edilməsi istiqamətində işlər aparılır.
+        
+        Azərbaycan baza ili (1990) ilə müqayisədə 2030-cu ilə qədər istilik effekti yaradan qazların emissiyalarının 35 faiz, 2050-ci ilə qədər isə 40 faiz azaldılmasını hədəf kimi götürmüşdür.
+        
+        İşğaldan azad edilmiş Qarabağ və Şərqi Zəngəzur, eləcə də Naxçıvan Muxtar Respublikası yaşıl enerji zonası elan olunmuşdur. Azad edilmiş ərazilərdə həyata keçirilən genişmiqyaslı bərpa və yenidənqurma prosesində ətraf mühitin qorunması prioritetdir. Həmin ərazilərdə “ağıllı şəhər”, “ağıllı kənd” kimi innovativ yanaşmalar tətbiq edilir, ekosistem bərpa olunur.
+        
+        Yaşıl enerji növlərinin yaradılması və yaşıl enerjinin dünya bazarlarına nəqli Azərbaycanın enerji siyasətinin prioritetidir. Azərbaycan elektrik enerjisi istehsalının qoyuluş gücündə bərpa olunan enerji mənbələrinin payının 2030-cu ilə qədər 30 faizə çatdırılmasını hədəfləyir.
+        
+        BMT-nin İqlim Dəyişmələri üzrə Çərçivə Konvensiyasının Tərəflər Konfransının 29-cu sessiyası – COP29 kimi mötəbər bir tədbirin Azərbaycanda keçirilməsi ilə əlaqədar yekdil qərarın verilməsi beynəlxalq ictimaiyyət tərəfindən Azərbaycana böyük hörmət və etimadın, eləcə də ölkəmizin milli, regional və qlobal səviyyədə ətraf mühitin qorunması, iqlim dəyişmələrinin qarşısının alınması işinə töhfəsinin təqdir olunmasının bariz nümunəsidir.
+        
+        Azərbaycan Respublikası Konstitusiyasının 109-cu maddəsinin 32-ci bəndini rəhbər tutaraq, iqlim dəyişmələrinə qarşı qlobal mübarizədə beynəlxalq həmrəyliyin gücləndirilməsi məqsədilə qərara alıram:
+        
+        1. Azərbaycan Respublikasında 2024-cü il “Yaşıl dünya naminə həmrəylik ili” elan edilsin.
+        
+        2. Azərbaycan Respublikası Prezidentinin Administrasiyası Azərbaycan Respublikasında 2024-cü ilin “Yaşıl dünya naminə həmrəylik ili” elan edilməsi ilə bağlı tədbirlər planına dair təkliflərini bir ay müddətində hazırlayıb Azərbaycan Respublikasının Prezidentinə təqdim etsin.
+        
+         
+        
+        İlham Əliyev
+        
+        Azərbaycan Respublikasının Prezidenti
+        
+        Bakı şəhəri, 25 dekabr 2023-cü i.</p>
+    </div>
+    <style>
+          .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 60%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    margin-left: 350px;
+    
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+   
+}
+.h2 ,h2{
+    padding: 20px 35px;
+font-size: 25px;
+color: rgba(1, 1, 187, 0.856);
+font-weight: 800;
+font-size: 50px;
+opacity: 0.4;
+color: rgb(101, 101, 255);
+position: absolute;
+margin: auto;
+left: 500px;
+right: 600px;
+font-weight: 300px;
+letter-spacing: 1px;
+position: relative;
+height: 150px;
+padding-top: 30px;
+width: 50%;
+margin-left: 350px;
+left: 0;
+right: 0;
+display: inline-block;
+width: 55%;
+text-align: center;
+
+}
+
+.panel {
+    padding:  50 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    display: none;
+padding: 10px;
+border: 1px solid #ddd;
+border-top: none;
+background-color: #f9f9f9;
+margin: 0;
+margin-left: 350px;
+margin-right: 252px;
+
+}
+    </style>
+    
+    <script>
+        
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+    </script>
+   
+     -->
+     
+        
+     
+<!-- 
+</body>
+</html> -->
